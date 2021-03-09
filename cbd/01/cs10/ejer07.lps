@@ -9,13 +9,13 @@
         <Filename Value="ejer07.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="16"/>
-        <CursorPos X="34" Y="25"/>
+        <TopLine Value="197"/>
+        <CursorPos X="25" Y="199"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>
     </Units>
-    <JumpHistory Count="8" HistoryIndex="7">
+    <JumpHistory Count="7" HistoryIndex="6">
       <Position1>
         <Filename Value="ejer07.lpr"/>
         <Caret Line="64" Column="5" TopLine="49"/>
@@ -42,12 +42,8 @@
       </Position6>
       <Position7>
         <Filename Value="ejer07.lpr"/>
-        <Caret Line="165" Column="22" TopLine="188"/>
+        <Caret Line="206" Column="55" TopLine="194"/>
       </Position7>
-      <Position8>
-        <Filename Value="ejer07.lpr"/>
-        <Caret Line="191" Column="18" TopLine="194"/>
-      </Position8>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

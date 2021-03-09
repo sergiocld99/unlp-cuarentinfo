@@ -9,8 +9,8 @@
         <Filename Value="ejer07.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="194"/>
-        <CursorPos X="18" Y="191"/>
+        <TopLine Value="197"/>
+        <CursorPos X="18" Y="205"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -42,7 +42,7 @@
       </Position6>
       <Position7>
         <Filename Value="ejer07.lpr"/>
-        <Caret Line="165" Column="22" TopLine="188"/>
+        <Caret Line="206" Column="55" TopLine="194"/>
       </Position7>
     </JumpHistory>
     <RunParams>

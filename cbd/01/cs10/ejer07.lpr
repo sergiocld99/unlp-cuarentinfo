@@ -1,4 +1,5 @@
 program ejer07;
+uses strutils;
 
 const
   NOMBRE_FUENTE = 'alumnos.txt';
@@ -6,12 +7,13 @@ const
 
 type
   TipoLegajo = string[7];
+  TipoNombre = string[20];
 
   TipoAlumno = record
     dni: integer;
     legajo: TipoLegajo;
-    nombre: string[20];
-    apellido: string[15];
+    nombre: TipoNombre;
+    apellido: TipoNombre;
     direccion: string[30];
     anio: integer;
     fechaNac: longInt;
@@ -80,6 +82,17 @@ begin
   leerAlumno(mAlumno);
   seek(binario, fileSize(binario));
   write(binario, mAlumno);
+end;
+
+// PROCEDIMIENTO DEL INCISO B (PRECONDICION: ARCHIVO ABIERTO, CURSOR AL INICIO)
+procedure listarAlumnosTerminadosEn(var sufijo: TipoNombre; var archivo: ArchBinario);
+var
+  mAlumno: TipoAlumno;
+begin
+  while not EOF(archivo) do begin
+     read(archivo, mAlumno);
+     if (AnsiEndsStr(sufijo, mAlumno.nombre)) then mostrarAlumno(mAlumno);
+  end;
 end;
 
 // PROCEDIMIENTO DEL INCISO C (PRECONDICION: ARCHIVOS ABIERTOS)
@@ -163,6 +176,7 @@ var
   archDest: text;
   nombreBinario: string[20];
   legajo: TipoLegajo;
+  sufijo: TipoNombre;
 
 begin
   // Pre-acciones
@@ -187,8 +201,13 @@ begin
           readln;
        end;
        '2' : begin
-          // do some stuff
+          writeln('Ingrese el sufijo a buscar: ');
           readln;
+          readln(sufijo);
+          reset(mBinario);
+          listarAlumnosTerminadosEn(sufijo, mBinario);
+          close(mBinario);
+          writeln;
        end;
        '3': begin
           reset(mBinario);
