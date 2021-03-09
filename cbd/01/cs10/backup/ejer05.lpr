@@ -16,7 +16,7 @@ type
 
   ArchEspecie = file of TipoEspecie;
 
-// -- PROCEDIMIENTOS --
+// -- PROCEDIMIENTOS COMUNES --
 procedure leerEspecie(var especie: TipoEspecie);
 begin
   writeln('Ingrese numero de especie: ');
@@ -29,7 +29,19 @@ begin
   readln(especie.color);
 end;
 
-// PROCEDIMIENTO: EL ARCHIVO ESTA ABIERTO EN MODO ESCRITURA
+procedure imprimirEspecie(var especie: TipoEspecie);
+begin
+  write('Nombre cientifico: ', especie.nomCientifico);
+  write('. Numero de especie: ', especie.numEspecie);
+  write('. Altura maxima: ', especie.alturaMax:0:2);
+  write('. Nombre vulgar: ', especie.nomVulgar);
+  write('. Color: ', especie.color);
+  writeln;
+end;
+
+// -- PROCEDIMIENTOS ESPECIFICOS --
+
+// PRECONDICION: EL ARCHIVO ESTA ABIERTO EN MODO ESCRITURA
 procedure cargarEspecies(var archivo: ArchEspecie);
 var
   nombreC: string[25];
@@ -52,16 +64,7 @@ begin
 
 end;
 
-procedure imprimirEspecie(var especie: TipoEspecie);
-begin
-  write('Nombre cientifico: ', especie.nomCientifico);
-  write('. Numero de especie: ', especie.numEspecie);
-  write('. Altura maxima: ', especie.alturaMax:0:2);
-  write('. Nombre vulgar: ', especie.nomVulgar);
-  write('. Color: ', especie.color);
-  writeln;
-end;
-
+// PRECONDICION: ARCHIVO DE TEXTO ABIERTO EN MODO ESCRITURA
 procedure imprimirEnArchivo(var especie: TipoEspecie; var archivo: text);
 begin
   write(archivo, 'Nombre cientifico: ', especie.nomCientifico);
@@ -178,6 +181,7 @@ begin
   end else writeln('Nombre no encontrado :(');
 end;
 
+// PROCEDIMIENTO DEL MENU PRINCIPAL (SOLO MUESTRA OPCIONES)
 procedure mostrarOpciones;
 begin
   writeln;
