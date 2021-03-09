@@ -9,15 +9,12 @@
         <Filename Value="ejer06.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="41"/>
+        <TopLine Value="143"/>
         <CursorPos X="16" Y="168"/>
         <UsageCount Value="28"/>
+        <Loaded Value="True"/>
       </Unit0>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
     <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>

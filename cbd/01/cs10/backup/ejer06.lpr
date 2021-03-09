@@ -165,6 +165,7 @@ begin
       '3': begin
         // Pedir isbn
         writeln('Ingrese ISBN (13 digitos) del libro a modificar: ');
+        readln;
         readln(isbn);
 
         // Abrir binario

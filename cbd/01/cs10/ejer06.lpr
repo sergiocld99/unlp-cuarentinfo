@@ -64,22 +64,19 @@ end;
 // PRECONDICION: ARCHIVO ABIERTO EN MODO LECTURA/ESCRITURA, CURSOR AL INICIO
 procedure modificarLibro(var binario: BinarioLibro; isbn: string);
 var
-  pos: integer;
   encontrado: boolean;
   mLibro: TipoLibro;
 begin
-  pos:= 0;
   encontrado:= false;
 
   while (not encontrado and not EOF(binario)) do begin
     read(binario, mLibro);
-    if (mLibro.isbn = isbn) then encontrado:= true
-    else pos:= pos+1;
+    encontrado:= (mLibro.isbn = isbn);
   end;
 
   if (encontrado) then begin
     pedirLibro(mLibro);
-    seek(binario, pos);
+    seek(binario, filePos(binario)-1);
     write(binario, mLibro);
     writeln('Modificado con exito');
   end else writeln('ISBN no encontrado :(');
