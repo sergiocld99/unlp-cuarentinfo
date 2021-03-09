@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="ejer06.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="161"/>
+        <CursorPos X="16" Y="168"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="13" HistoryIndex="12">
+      <Position1>
+        <Filename Value="ejer06.lpr"/>
+        <Caret TopLine="27"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="34" Column="44" TopLine="12"/>
+      </Position2>
+      <Position3>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="60" Column="19" TopLine="46"/>
+      </Position3>
+      <Position4>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="113" Column="6" TopLine="102"/>
+      </Position4>
+      <Position5>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="39" Column="11" TopLine="30"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="72" Column="28" TopLine="65"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="74" Column="22" TopLine="66"/>
+      </Position7>
+      <Position8>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="129" Column="49" TopLine="121"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="133" Column="25" TopLine="128"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="20" TopLine="12"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="129" Column="60" TopLine="140"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="64" Column="67" TopLine="55"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ejer06.lpr"/>
+        <Caret Line="165" Column="72" TopLine="151"/>
+      </Position13>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
