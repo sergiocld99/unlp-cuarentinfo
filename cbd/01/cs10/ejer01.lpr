@@ -5,44 +5,37 @@ const
 
 type
   TipoNombre = string[20];
+  ArchMateriales = file of TipoNombre;
 
-procedure crearArchivoVacio(var archivo: text; var nombre: TipoNombre);
-begin
-  Assign(archivo, nombre);
-  rewrite(archivo);
-end;
-
-procedure escribirMateriales(var archivo: text);
+procedure escribirMateriales(var archivo: ArchMateriales);
 var
   input: TipoNombre;
 begin
   repeat
     readln(input);
-    writeln(archivo, input);
+    write(archivo, input);
   until(input = PALABRA_FIN) ;
 end;
 
 var
-  archivo: text;
-  nombreArch, palabra: TipoNombre;
+  archivo: ArchMateriales;
+  nombreArch: TipoNombre;
 
 begin
-  writeln('hola mundo');
-  writeln();
-
   {Paso 1 - Creación del archivo}
-  writeln('ingrese nombre del archivo a crear');
+  writeln('Ingrese nombre del archivo a crear');
   readln(nombreArch);
-  crearArchivoVacio(archivo, nombreArch);
-  writeln('se creo el archivo ', nombreArch);
+  assign(archivo, nombreArch);
+  rewrite(archivo);
+  writeln('Se creo el archivo ', nombreArch);
 
   {Paso 2 - Carga de materiales}
-  writeln('escriba nombres de materiales, ', PALABRA_FIN, ' para terminar');
+  writeln('Escriba nombres de materiales, ', PALABRA_FIN, ' para terminar');
   escribirMateriales(archivo);
 
   {Terminar}
   close(archivo);
-  writeln('se cerro el archivo, fin del programa');
+  writeln('Se cerro el archivo, fin del programa');
   readln();
 
 end.
