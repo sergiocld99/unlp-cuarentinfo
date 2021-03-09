@@ -207,7 +207,7 @@ begin
           reset(mBinario);
           listarAlumnosTerminadosEn(sufijo, mBinario);
           close(mBinario);
-          readln;
+          writeln;
        end;
        '3': begin
           reset(mBinario);
