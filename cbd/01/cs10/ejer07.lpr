@@ -66,12 +66,12 @@ end;
 // PROCEDIMIENTO PARA ESCRIBIR UN ALUMNO EN ARCHIVO DE TEXTO
 procedure escribirAlumno(var alumno: TipoAlumno; var archivo: text);
 begin
-  write(archivo, 'DNI ', alumno.dni);
-  write(archivo, ' - Legajo ', alumno.legajo);
-  write(archivo, ' - ', alumno.apellido, ' ', alumno.nombre);
-  write(archivo, ' - Direccion: ', alumno.direccion);
-  write(archivo, ' - Anio: ', alumno.anio);
-  write(archivo, ' - Fecha Nac: ', alumno.fechaNac);
+  write(archivo, alumno.dni);
+  write(archivo, ' ', alumno.legajo);
+  write(archivo, ' ', alumno.apellido, ' ', alumno.nombre);
+  write(archivo, ' "', alumno.direccion);
+  write(archivo, '" ', alumno.anio);
+  write(archivo, ' ', alumno.fechaNac);
 end;
 
 // PROCEDIMIENTO PARA AGREGAR UN ALUMNO AL ARCHIVO BINARIO

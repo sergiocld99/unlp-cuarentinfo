@@ -156,10 +156,8 @@ var
   query, nuevoNombre: string[20];
   mEspecie: TipoEspecie;
   encontrado: boolean;
-  pos: integer;
 begin
   encontrado:= false;
-  pos:= 0;
 
   writeln('Ingrese nombre cientifico a reemplazar: ');
   readln;
@@ -167,15 +165,14 @@ begin
 
   while (not (EOF(archivo)) and not encontrado) do begin
     read(archivo, mEspecie);
-    if (mEspecie.nomCientifico = query) then encontrado:= true
-    else pos:= pos+1;
+    encontrado:= (mEspecie.nomCientifico = query);
   end;
 
   if (encontrado) then begin
     writeln('Ingrese nombre cientifico nuevo: ');
     readln(nuevoNombre);
     mEspecie.nomCientifico:= nuevoNombre;
-    seek(archivo, pos);
+    seek(archivo, filePos(archivo)-1);
     write(archivo, mEspecie);
     writeln('Reemplazado con exito');
   end else writeln('Nombre no encontrado :(');

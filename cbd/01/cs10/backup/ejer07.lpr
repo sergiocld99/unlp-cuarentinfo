@@ -115,27 +115,24 @@ end;
 // PROCEDIMIENTO DEL INCISO E (PRECONDICION: CURSOR AL INICIO)
 procedure modificarAlumno(var legajo: TipoLegajo; var archivo: ArchBinario);
 var
-  pos: integer;
   encontrado: boolean;
   mAlumno: TipoAlumno;
 begin
   // Inicializaciones
-  pos:= 0;
   encontrado:= false;
 
   // Busco alumno
   while (not encontrado and not EOF(archivo)) do begin
      // revisar si coincide
      read(archivo, mAlumno);
-     if (mAlumno.legajo = legajo) then encontrado:= true
-     else pos:= pos+1;
+     encontrado:= (mAlumno.legajo = legajo);
   end;
 
   if (encontrado) then begin
      // Cambio fecha
      writeln('Ingrese la nueva fecha:  ');
      readln(mAlumno.fechaNac);
-     seek(archivo, pos);
+     seek(archivo, filePos(archivo)-1);
      write(archivo, mAlumno);
   end else writeln('Alumno no encontrado');
 end;

@@ -1,8 +1,8 @@
-Nombre cientifico: aaa. Numero de especie: 5. Altura maxima: 1.68. Nombre vulgar: flor 5. Color: azul
-Nombre cientifico: bbb. Numero de especie: 1. Altura maxima: 1.50. Nombre vulgar: flor 1. Color: rojo
-Nombre cientifico: ccc. Numero de especie: 3. Altura maxima: 1.46. Nombre vulgar: flor 3. Color: amarillo
-Nombre cientifico: ddd. Numero de especie: 4. Altura maxima: 1.89. Nombre vulgar: flor 4. Color: verde
-Nombre cientifico: eee. Numero de especie: 4. Altura maxima: 1.89. Nombre vulgar: flor 4. Color: verde
-Nombre cientifico: fff. Numero de especie: 4. Altura maxima: 1.89. Nombre vulgar: flor 4. Color: verde
-Nombre cientifico: esto va al final. Numero de especie: 7. Altura maxima: 2.09. Nombre vulgar: flor 7. Color: violeta
-Nombre cientifico: esto tmb al final. Numero de especie: 8. Altura maxima: 1.49. Nombre vulgar: flor 8. Color: rosa
+"aaa" 5 1.68 "flor 5" azul
+"bbb" 1 1.50 "flor 1" rojo
+"ccc" 3 1.46 "flor 3" amarillo
+"ddd" 4 1.89 "flor 4" verde
+"eee" 4 1.89 "flor 4" verde
+"fff" 4 1.89 "flor 4" verde
+"esto va al final" 7 2.09 "flor 7" violeta
+"esto tmb al final" 8 1.49 "flor 8" rosa

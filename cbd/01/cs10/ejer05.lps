@@ -9,7 +9,8 @@
         <Filename Value="ejer05.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="37"/>
+        <TopLine Value="65"/>
+        <CursorPos X="18" Y="77"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>

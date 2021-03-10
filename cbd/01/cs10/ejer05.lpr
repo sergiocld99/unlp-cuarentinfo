@@ -67,11 +67,11 @@ end;
 // PRECONDICION: ARCHIVO DE TEXTO ABIERTO EN MODO ESCRITURA
 procedure imprimirEnArchivo(var especie: TipoEspecie; var archivo: text);
 begin
-  write(archivo, 'Nombre cientifico: ', especie.nomCientifico);
-  write(archivo, '. Numero de especie: ', especie.numEspecie);
-  write(archivo, '. Altura maxima: ', especie.alturaMax:0:2);
-  write(archivo, '. Nombre vulgar: ', especie.nomVulgar);
-  write(archivo, '. Color: ', especie.color);
+  write(archivo, '"', especie.nomCientifico, '" ');
+  write(archivo, especie.numEspecie, ' ');
+  write(archivo, especie.alturaMax:0:2, ' "');
+  write(archivo, especie.nomVulgar, '" ');
+  write(archivo, especie.color);
   writeln(archivo);
 end;
 
