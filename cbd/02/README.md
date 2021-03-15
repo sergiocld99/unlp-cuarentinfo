@@ -11,3 +11,10 @@ Los detalles son de estructura similar entre sí, y permiten actualizar el archi
 * Leer bien las precondiciones, y tener precaución cuando un elemento puede encontrarse repetidas veces entre los archivos detalles (no solo en uno de ellos).
 * El uso de variables auxiliares para almacenar "valores anteriores" ESTÁ BIEN, así que no dudes en usarlas.
 * Tratar de escribir y mover el cursor la menor cantidad de veces posible en el maestro, con ayuda de contadores, sumadores y otras variables auxiliares.
+
+## Arreglos en Pascal
+![Alt Text](/cbd/02/array.png)
+
+## Búsqueda de mínimo
+![Alt Text](/cbd/02/minimo-3.png)
+![Alt Text](/cbd/02/minimo-n.png)
