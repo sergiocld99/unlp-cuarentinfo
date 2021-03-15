@@ -8,5 +8,8 @@ Al momento de suponer los sentidos de las corrientes en un circuito, se define l
 Sin embargo, para la 2° Ley de Kirchoff, siempre se coloca el signo de salida (tanto en fuentes como en los demás elementos), quedando negativo para resistores si "voy en el mismo sentido" que la corriente.
 
 
+# Potencia de fuentes
+Entregarán energía si el sentido de la corriente en la misma "acompaña" a la polaridad de la fuente (en otras palabras, sale por el positivo de la fuente). Recibirán energía en el caso contrario.
+
 # Fuentes controladas
 ![Alt text](/eye/01/fuentes-controladas.png?raw=true)
