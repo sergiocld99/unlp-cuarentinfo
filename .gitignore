@@ -1,2 +1,7 @@
 
 *.docx
+*.lpi
+*.lps
+*.exe
+*.o
+*.compiled

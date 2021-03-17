@@ -12,6 +12,10 @@ Los detalles son de estructura similar entre sí, y permiten actualizar el archi
 * El uso de variables auxiliares para almacenar "valores anteriores" ESTÁ BIEN, así que no dudes en usarlas.
 * Tratar de escribir y mover el cursor la menor cantidad de veces posible en el maestro, con ayuda de contadores, sumadores y otras variables auxiliares.
 
+## NO OLVIDAR
+* CONTROLAR LA CONDICIÓN PRINCIPAL DE CORTE (<> 9999 o 'zzzz') EN BUCLES WHILE INTERNOS
+* RETROCEDER EL CURSOR PARA ACTUALIZAR UN REGISTRO, SINO SE REEMPLAZA EN EL SIGUIENTE
+
 ## Arreglos en Pascal
 ![Alt Text](/cbd/02/array.png)
 

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="D:\FPC\3.2.0\bin\i386-Win32\fpc.exe" Date="1355043128"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq &quot;-FiD:\MIS_DOCS\GitHub\practicas\unlp-info-s5\cbd\02\cs10\ej01 - ministerio\lib\i386-win32&quot; &quot;-FuD:\MIS_DOCS\GitHub\practicas\unlp-info-s5\cbd\02\cs10\ej01 - ministerio\&quot; &quot;-FUD:\MIS_DOCS\GitHub\practicas\unlp-info-s5\cbd\02\cs10\ej01 - ministerio\lib\i386-win32\&quot; &quot;-FED:\MIS_DOCS\GitHub\practicas\unlp-info-s5\cbd\02\cs10\ej01 - ministerio\&quot; &quot;-oD:\MIS_DOCS\GitHub\practicas\unlp-info-s5\cbd\02\cs10\ej01 - ministerio\creadorMaestro.exe&quot; creadorMaestro.pas"/>
-</CONFIG>
