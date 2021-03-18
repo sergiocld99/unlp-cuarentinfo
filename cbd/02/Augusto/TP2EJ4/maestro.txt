@@ -1,0 +1,15 @@
+213452 IndianaJones
+Accion
+Spielberg
+2.1
+200
+213453 StarWars
+Accion
+Lucas
+2.2
+400
+213454 Lego
+Aventura
+Alguien
+3.2
+250

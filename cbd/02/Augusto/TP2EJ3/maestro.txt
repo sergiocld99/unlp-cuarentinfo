@@ -1,0 +1,20 @@
+1234 42
+Zapatos 
+21.3
+marron
+30 15
+1235 43
+Zapatos cool
+19.4
+negro
+40 20
+1236 44
+Zapatos nuevos
+30.3
+blanco
+30 10
+1237 45
+Zapatos lindos
+26.1
+rojo
+50 30
