@@ -84,12 +84,15 @@ var
   numActual:Integer;
   cal:calzado;
 begin
+  // determinar primer minimo
   minimo(ven, reg, det);
+
+  // leo el primer calzado del maestro
   read(mae, cal);
 
   // mientras hayan ventas
   while (reg.codCalzado <> VALOR_ALTO) do begin
-    // guardo codigo actual
+    // nuevo codigo
     codActual:= reg.codCalzado;
 
     // busco en el maestro
@@ -97,14 +100,14 @@ begin
 
     // mientras sea mismo codigo
     while (reg.codCalzado = codActual) do begin
-      // guardo numero actual
+      // nuevo talle
       numActual:= reg.numero;
 
       // busco en el maestro
       while (cal.numero <> numActual) do read(mae, cal);
 
-      // mientras sea mismo numero
-      while (reg.numero = numActual) do begin
+      // mientras sea mismo talle y codigo
+      while (reg.codCalzado = codActual) and (reg.numero = numActual) do begin
         // informo si no tuvo ventas
         if (reg.cantVendida = 0) then with(reg) do writeln(codCalzado, ' ', numero)
         else cal.stock:= cal.stock - reg.cantVendida;
@@ -115,6 +118,9 @@ begin
 
       // acciones finales para dicho numero
       if (cal.stock < cal.stockMin) then with(cal) do writeln(reporte, codigo, ' ', numero, ' ', stock, ' ', stockMin);
+
+      // actualizo maestro (RECORDAR RETROCEDER EL CURSOR)
+      seek(mae, filePos(mae)-1);
       write(mae, cal);
     end;
   end;

@@ -1,0 +1,6 @@
+1001 99.99 1000 10 sprite
+botella de 2.25 litros
+1002 79.99 500 8 cepita
+tetra pack de 1.5 litros
+1003 59.99 200 5 baggio
+tetra pack de 1.5 litros

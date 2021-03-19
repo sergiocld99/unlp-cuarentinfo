@@ -51,7 +51,7 @@ begin
     // guardo autor actual
     autorActual:= miCd.codAutor;
     writeln('Autor: ', autorActual);
-    write(miListado, 'Autor: ', autorActual);
+    writeln(miListado, 'Autor: ', autorActual);
     sumaAutor:= 0;
 
     // mientras sea el mismo autor
@@ -62,8 +62,8 @@ begin
       writeln(miListado, 'Genero: ', generoActual);
       sumaGenero:= 0;
 
-      // mientras sea mismo genero
-      while (miCd.codAutor <> VALOR_ALTO) and (miCd.genero = generoActual) do begin
+      // mientras sea mismo genero y autor
+      while (miCd.codAutor = autorActual) and (miCd.genero = generoActual) do begin
         // suposicion: no hay discos repetidos
         with (miCd) do begin
              writeln('Nombre Disco: ', nombreDisco, ' cantidad vendida: ', cantVendida);

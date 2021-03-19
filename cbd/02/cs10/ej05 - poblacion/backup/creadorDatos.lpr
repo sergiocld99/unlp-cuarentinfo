@@ -1,0 +1,5 @@
+program creadorDatos;
+
+begin
+end.
+

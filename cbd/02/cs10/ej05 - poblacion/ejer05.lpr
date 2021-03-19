@@ -1,7 +1,5 @@
 program ejer05;
 
-// TODO: Completar este ejercicio esta semana
-
 const
   PARTIDO_FIN = 'zzzz';
 
@@ -42,6 +40,7 @@ var
   adultosPartido: Integer;
 
 begin
+  // abro el archivo
   reset(arch);
 
   // leo el primero
@@ -55,37 +54,54 @@ begin
     writeln('Partido: ', parActual);
     ninosPartido:= 0;
     adultosPartido:= 0;
-    indiceLoc:= 1;
+    indiceLoc:= 0;
 
     // mientras sea mismo partido
     while (reg.partido = parActual) do begin
 
       // nueva localidad
       locActual:= reg.localidad;
-      writeln('Localidad ',indiceLoc, ': ', locActual);
       indiceLoc:= indiceLoc + 1;
+      writeln('Localidad ',indiceLoc, ': ', locActual);
       ninosLoc:= 0;
       adultosLoc:= 0;
 
-      // mientras sea misma localidad (cuidado: revisar corte de control principal)
-      while (reg.partido <> PARTIDO_FIN) and (reg.localidad = locActual) do begin
+      // mientras sea misma localidad y partido
+      while (reg.partido = parActual) and (reg.localidad = locActual) do begin
+        // sumar en localidad
         ninosLoc:= ninosLoc + reg.cantNinos;
         adultosLoc:= adultosLoc + reg.cantAdMay;
+
+        // sumar en partido
+        ninosPartido:= ninosPartido + reg.cantNinos;
+        adultosPartido:= adultosPartido + reg.cantAdMay;
+
+        // informar barrio
+        writeln('Nombre del Barrio: ', reg.barrio, ' Cantidad ninos:  ', reg.cantNinos, ' Cantidad adultos: ', reg.cantAdMay);
 
         // leer siguiente barrio
         leer(arch, reg);
       end;
 
       // totalizar localidad
-      writeln('Cantidad ninos: ', ninosLoc, ' Cantidad adultos: ', adultosLoc);
-
+      writeln('Total ninos localidad ', indiceLoc, ': ', ninosLoc, ' Total adultos localidad ', indiceLoc, ': ', adultosLoc);
     end;
 
+    // totalizar partido
+    writeln('TOTAL NINOS PARTIDO: ', ninosPartido, ' TOTAL ADULTOS PARTIDO: ', adultosPartido);
   end;
+
+  // cerrar archivo
+  close(arch);
 end;
 
 var
+  miArchivo:archivo;
 
 begin
+  assign(miArchivo, 'datos.dat');
+  informar(miArchivo);
+  writeln('Fin del programa');
+  readln;
 end.
 
