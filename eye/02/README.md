@@ -10,7 +10,7 @@ Por ejemplo, si una resistor está en **paralelo** con una fuente, JUSTIFICAREMO
 ### Polaridad de la tensión en elementos pasivos
 Establecemos como **positivo** por donde ingresa la corriente, y **negativo** por donde sale. 
 
-![Alt text]("eye/02/figura1.png")
+![Alt text](figura1.png)
 
 * Importante: una fuente de corriente ESTABLECE SOLO EL SENTIDO DE I DE SU RAMA, es decir, no puedo asegurar nada de los sentidos de corrientes de los otros elementos.
 
@@ -18,8 +18,8 @@ Establecemos como **positivo** por donde ingresa la corriente, y **negativo** po
 
 Sin embargo, pueden aparecer problemas como en la siguiente figura, donde para R2 quedó "positivo" en ambos extremos (nodos antes definidos cuando se hizo R1 y R3). Entonces, acá es cuando se **SUPONE un sentido de la corriente**, viendo cuál de los extremos es "más positivo que el otro".  
 
-![Alt text]("eye/02/figura2.png")
-![Alt text]("eye/02/figura3.png")
+![Alt text](figura2.png)
+![Alt text](figura3.png)
 
 En rojo quedaron los SUPUESTOS.
 
@@ -28,23 +28,23 @@ Vemos en la Figura 3 una suposición para R2. De esta manera, suponemos que el *
 ## Polaridad de la tensión en elementos activos
 El signo de la tensión de las fuentes queda supuesta por los signos en los nodos:
 
-![Alt text]("eye/02/figura4.png")
+![Alt text](figura4.png)
 
 Vemos que para este ejemplo, quedó supuesto que la fuente 1 entrega energía, y la fuente 2 recibe.
 
 ### Resolución
 UNA VEZ HECHO TODO ESTE ANÁLISIS ESTOY EN CONDICIONES DE APLICAR LA 1RA LEY DE KIRCHOFF EN EL NODO 1 y 2. Luego voy reemplazando las corrientes por expresiones de la Ley de Ohm (salvo las que son dato, en general, solo reemplazamos las de los elementos pasivos)
 
-![Alt text]("eye/02/figura6.png")
+![Alt text](figura6.png)
 
 Dejamos las corrientes/tensiones de las fuentes de un lado de las igualdades, y los términos con incógnitas del otro lado. Reemplazamos las R por G (conductancia) para evitar la escritura de varios denominadores, de modo que el sistema matricial quede más simplificado a la vista. 
 
-![Alt text]("eye/02/figura7.png")
+![Alt text](figura7.png)
 
 ### Supernodo
 Si entre dos nodos independientes (es decir, ninguno de ellos es U0, el de referencia, ya que sería al pepe porque vale 0) hay una **fuente de TENSIÓN IDEAL** (SOLO ESO y nada más) decimos que ambos nodos forman un supernodo. ¿Y para que me sirve? Bueno, permite aplicar la 1ra Ley de Kirchoff directamente de esta forma:
 
-![Alt text]("eye/02/figura8.png")  
+![Alt text](figura8.png)  
 
 ## Análisis de Malla
 Dual al anterior, tiene algunas limitaciones pero quedan menos ecuaciones (por algo me enseñaron directamente esto ._. XD)
@@ -66,4 +66,4 @@ Midiendo sobre un elemento de circuito, por ejemplo, la tensión de un resistor 
 * El sentido de la corriente en una rama con la polaridad de la fuente (pueden ser diferentes)
 * Un supernodo NO puede contener una resistencia junto a la fuente, como en este caso:
 
-![Alt text]("eye/02/figura9.png")
+![Alt text](figura9.png)
