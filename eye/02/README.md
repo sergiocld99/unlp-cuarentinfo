@@ -1,5 +1,20 @@
 # Apuntes de Clase 2
 
+## Índice del resumen
+- [Análisis Nodal](#análisis-nodal)
+  - [Polaridad de la tensión en elementos pasivos](#polaridad-de-la-tensión-en-elementos-pasivos)
+  - [Polaridad de la tensión en elementos activos](#polaridad-de-la-tensión-en-elementos-activos)
+  - [Resolución](#resolución)
+  - [Supernodo](#supernodo)
+- [Análisis de Mallas](#análisis-de-malla)
+  - [Supermalla](#supermalla)
+- [Método de superposición](#método-de-superposición)
+- [Método de Thevenin y Norton](#método-de-thevenin-y-norton)
+  - [Resistencia de Thevenin](#resistencia-de-thevenin)
+  - [Tensión de Thevenin](#tensión-de-thevenin)
+- [Divisor de tensión y corriente](#divisor-de-tensión-y-corriente)
+- [No confundir](#no-confundir)
+
 ## Análisis Nodal
 Al revisar cuáles son las incógnitas del circuito, encontramos en general que se deben hallar las corrientes y tensiones en resistores, pero debe analizarse también si al mirar conexiones serie y paralelo hay resultados que se repetirán.
 
@@ -23,9 +38,9 @@ Sin embargo, pueden aparecer problemas como en la siguiente figura, donde para R
 
 En rojo quedaron los SUPUESTOS.
 
-Vemos en la Figura 3 una suposición para R2. De esta manera, suponemos que el **potencial** en el Nodo 2 es MENOR que el potencial del Nodo 1.
+Vemos en la Figura 3 una suposición para R2. De esta manera, suponemos que el **potencial** en el Nodo 2 es MENOR que el del Nodo 1.
 
-## Polaridad de la tensión en elementos activos
+### Polaridad de la tensión en elementos activos
 El signo de la tensión de las fuentes queda supuesta por los signos en los nodos:
 
 ![Alt text](figura4.png)
@@ -52,11 +67,19 @@ Dual al anterior, tiene algunas limitaciones pero quedan menos ecuaciones (por a
 ### Supermalla
 Si dos mallas comparten una fuente de corriente entremedio, se puede suprimir la rama donde se encuentra ésta para analizar una supermalla. PERO, no debemos olvidar que en una parte de la malla la corriente tendrá un valor y en la otra parte otro valor vinculado con la corriente de If conocida por 1° Ley de Kirchoff.
 
-## Método de superposición (último recurso)
+## Método de superposición
 En circuitos lineales, lo que se hace es hacer los cálculos trabajando de una fuente por vez. Para anular una fuente de tensión (U=0) se realiza un cortocircuito donde ésta se encuentre. Para anular una fuente de corriente (I=0) se reemplaza por un "tramo abierto". Luego, para el resultado final sumo algebraicamente todas las superposiciones. Esto último debe realizarse con cuidado porque las corrientes pueden tener diferente sentido en cada caso.
 
 ## Método de Thevenin y Norton
 Para un circuito del tipo **dipolo activo lineal**, para el 1° método se puede reemplazar el circuito por una fuente de tensión (Uth) y una resistencia (Rth), conectado a dos puntos A y B (tramo abierto), que al conectarlos circula una corriente Icc. En el 2° método, se reemplaza el circuito por una fuente de corriente (In) y una conductancia (Gn), en paralelo a un cortocircuito. Las incógnitas se obtienen por Ley de Ohm en ambos casos.
+
+### Resistencia de Thevenin
+Se halla suprimiendo únicamente las fuentes independientes. Si existen fuentes controladas, será necesario conectar una **fuente test** entre los extremos "a" y "b" con un valor arbitrario, por ejemplo 1V, y luego resolver para encontrar cuánto vale la "intensidad de testeo". Finalmente, por Ley de Ohm: Rth = Utest / Itest
+
+- Fuente: https://innovacionumh.es/Proyectos/P_19/Tema_1/UMH_10.htm
+
+### Tensión de Thevenin
+No se suprimen las fuentes, pero el tramo a-b queda abierto, por lo tanto hay algunos cálculos simplificados e igualdades al resolver por análisis de nodos. Por ejemplo, si hay una resistencia en la rama abierta no afectará en lo más mínimo (sólo para Uth)
 
 ## Divisor de tensión y corriente
 Midiendo sobre un elemento de circuito, por ejemplo, la tensión de un resistor en un circuito serie compuesto por varios resistores, por Ley de Ohm se puede conocer la tensión de la fuente. Similarmente, midiendo la corriente en una conductancia de un circuito paralelo de conductancias, se puede determinar la corriente de la fuente. Esto tiene aplicaciones, por ejemplo, en Puente de Whitstone (o como se escriba), para conocer la tensión en el "entremedio del rombo" (ver filminas para el desarrollo).
