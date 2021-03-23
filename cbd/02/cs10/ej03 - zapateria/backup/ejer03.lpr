@@ -1,7 +1,5 @@
 program ejer03;
 
-// TODO: CHECK THIS LATER :wink:
-
 // para concatenar
 uses sysutils;
 
@@ -20,6 +18,7 @@ type
     numero: Integer;
     cantVendida: Integer;
   end;
+
   detalle = file of venta;
 
   // maestro
@@ -32,6 +31,7 @@ type
     stock: Integer;
     stockMin: Integer;
   end;
+
   maestro = file of calzado;
 
   // arreglos de detalles
@@ -50,14 +50,19 @@ end;
 procedure determinarMin(var arreglo:arrayVen; var resultado: Integer);
 var
   i:Integer;
-  codMin: Integer;
+  min:venta;
 begin
-  codMin:= arreglo[1].codCalzado;
+  min:=arreglo[1];
   resultado:= 1;
 
-  for i:=2 to N do if (arreglo[i].codCalzado < codMin) then begin
-    codMin:= arreglo[i].codCalzado;
-    resultado:= i;
+  for i:=2 to N do begin
+     if (arreglo[i].codCalzado < min.codCalzado) then begin
+        min:=arreglo[i];
+        resultado:= i;
+     end else if (arreglo[i].codCalzado = min.codCalzado) and (arreglo[i].numero < min.numero) then begin
+        min:=arreglo[i];
+        resultado:= i;
+     end;
   end;
 end;
 
@@ -79,10 +84,15 @@ end;
 
 procedure actualizar(var mae:maestro; var det:arrayDet; var ven:arrayVen; var reporte:text);
 var
-  reg: venta;
+  venActual:Integer;
   codActual:Integer;
-  numActual:Integer;
+
+  // el que se lee del maestro
   cal:calzado;
+
+  // la que se lee del detalle
+  reg: venta;
+
 begin
   // determinar primer minimo
   minimo(ven, reg, det);
@@ -90,39 +100,55 @@ begin
   // leo el primer calzado del maestro
   read(mae, cal);
 
-  // mientras hayan ventas
+  // mientras hayan ventas por procesar
   while (reg.codCalzado <> VALOR_ALTO) do begin
-    // nuevo codigo
-    codActual:= reg.codCalzado;
+     codActual:= reg.codCalzado;
 
-    // busco en el maestro
-    while (cal.codigo <> codActual) do read(mae, cal);
-
-    // mientras sea mismo codigo
+    // mientras sea mismo calzado
     while (reg.codCalzado = codActual) do begin
+
       // nuevo talle
-      numActual:= reg.numero;
+      venActual:= 0;
 
-      // busco en el maestro
-      while (cal.numero <> numActual) do read(mae, cal);
+      // busco calzado y talle en el maestro
+      while (cal.codigo <> reg.codCalzado) or (cal.numero <> reg.numero) do begin
+        // imprimir por pantalla que no tuvo ventas
+        writeln(cal.codigo, ' ', cal.numero);
+        read(mae, cal);
+      end;
 
-      // mientras sea mismo talle (NO OLVIDAR CORTE DE CONTROL PRINCIPAL)
-      while (reg.codCalzado <> VALOR_ALTO) and (reg.numero = numActual) do begin
-        // informo si no tuvo ventas
-        if (reg.cantVendida = 0) then with(reg) do writeln(codCalzado, ' ', numero)
-        else cal.stock:= cal.stock - reg.cantVendida;
+      // mientras sea mismo talle y calzado
+      while (reg.codCalzado = cal.codigo) and (reg.numero = cal.numero) do begin
+
+        // llevo la cuenta de la cantidad de ventas
+        venActual:= venActual + reg.cantVendida;
 
         // avanzo en detalles
         minimo(ven, reg, det);
       end;
 
-      // acciones finales para dicho numero
+      // acciones finales para dicho calzado
+      cal.stock:= cal.stock - venActual;
       if (cal.stock < cal.stockMin) then with(cal) do writeln(reporte, codigo, ' ', numero, ' ', stock, ' ', stockMin);
 
       // actualizo maestro (RECORDAR RETROCEDER EL CURSOR)
       seek(mae, filePos(mae)-1);
       write(mae, cal);
+
+      // avanzo en maestro (para evitar imprimirlo como si no tuviera ventas)
+      if not eof(mae) then read(mae, cal);
+
     end;
+  end;
+
+  // imprimir por pantalla que no tuvo ventas
+  writeln(cal.codigo, ' ', cal.numero);
+
+  // informar resto de calzados sin ventas
+  while not eof(mae) do begin
+    read(mae, cal);
+    // imprimir por pantalla que no tuvo ventas
+    writeln(cal.codigo, ' ', cal.numero);
   end;
 
 end;
@@ -138,8 +164,8 @@ var
 
 begin
   // Asignar archivos
-  assign(mae, 'maestro3.dat');
-  for i:=1 to N do assign(det[i], concat('ventas', intToStr(i),  '.dat'));
+  assign(mae, 'maestro.dat');
+  for i:=1 to N do assign(det[i], concat('detalle', intToStr(i),  '.dat'));
   assign(reporte, 'calzadosintock.txt');
 
   // abrir archivos
