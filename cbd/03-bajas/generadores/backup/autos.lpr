@@ -58,13 +58,19 @@ var
 begin
   assign(arch,'autos.dat');
   rewrite(arch);
+  randomize;
 
   writeln('CODIGO PUERTAS DESCRIPCION MOTOR PATENTE');
+
+  // crear cabecera para lista invertida
+  auto.descripcion:='0';
+  with(auto) do writeln(codigoVehiculo,' ',cantidadPuertas,' ',descripcion,' ',nroMotor,' ',patente);
+  write(arch, auto);
 
   for i:=1 to 30 do begin
     auto.cantidadPuertas:=random(4)+2;
     auto.codigoVehiculo:=100+i;
-    auto.descripcion:='0';
+    auto.descripcion:='null';
     auto.nroMotor:=randomCode();
     auto.patente:=patenteRandom();
     with(auto) do writeln(codigoVehiculo,' ',cantidadPuertas,' ',descripcion,' ',nroMotor,' ',patente);

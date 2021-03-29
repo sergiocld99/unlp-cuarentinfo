@@ -2,6 +2,6 @@
 *.docx
 *.lpi
 *.lps
-*.exe
+*backup
 *.o
 *.compiled
