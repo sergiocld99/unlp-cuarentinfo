@@ -3,10 +3,10 @@
 % Cuidado, porque eso ultimo difiere del orden visto en la teoria a puño y letra
 
 function coef = ajusteLineal (x, y)
-	sumx=sum(x);
-	sumx2=sum(x.^2);
-	sumy=sum(y);
-	sumxy=sum(x.*y);
+	sumx=sum(x)
+	sumx2=sum(x.^2)
+	sumy=sum(y)
+	sumxy=sum(x.*y)
 	n=length(x);
 	m1=[sumx n;sumx2 sumx];
 	m2=[sumy;sumxy];
