@@ -15,6 +15,9 @@ function coef = ajusteSegundoGrado (x, y)
 	m1=[sumx2 sumx n;sumx3 sumx2 sumx;sumx4 sumx3 sumx2];
 	m2=[sumy;sumxy;sumx2y];
 	coef=m1\m2;
+
+	% informar funcion	
+	printf("Funcion de ajuste: %f x^2 + (%f) x + (%f)\n", coef(1), coef(2), coef(3))
 endfunction
 
 % testeado, funciona bien :)

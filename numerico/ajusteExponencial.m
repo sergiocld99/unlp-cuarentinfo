@@ -1,13 +1,12 @@
-function ajustePotencial (x, y, paso)
-	lx=log(x);
+function ajusteExponencial (x, y, paso)
 	ly=log(y);
-	sumlx=sum(lx)
-	suml2x=sum(lx.^2)
+	sumx=sum(x)
+	sumx2=sum(x.^2)
 	sumly=sum(ly)
-	sumlxly=sum(lx.*ly)
+	sumxly=sum(x.*ly)
 	n=length(x);
-	m1=[n sumlx;sumlx suml2x];
-	m2=[sumly;sumlxly];
+	m1=[n sumx;sumx sumx2];
+	m2=[sumly;sumxly];
 	coefaux=m1\m2;
 	a0=coefaux(1)
 	a1=coefaux(2)
@@ -15,7 +14,7 @@ function ajustePotencial (x, y, paso)
 	B=a1
 
 	% funcion de ajuste como mensaje
-	printf("Funcion de ajuste: %f * x^%f\n", A, B)
+	printf("Funcion de ajuste: %f * e^(%f x)\n", A, B)
 
 	% vamo a dibujar
 	clf
@@ -24,6 +23,6 @@ function ajustePotencial (x, y, paso)
 	hold on	
 
 	xi=[x(1):paso:x(length(x))];
-	yi=A.*xi.^B;
+	yi=A.*exp(B.*xi);
 	plot(xi,yi);	
 endfunction

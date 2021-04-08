@@ -11,6 +11,9 @@ function coef = ajusteLineal (x, y)
 	m1=[sumx n;sumx2 sumx];
 	m2=[sumy;sumxy];
 	coef=m1\m2;
+
+	% informar funcion	
+	printf("Funcion de ajuste: %f x + (%f)\n", coef(1), coef(2))
 endfunction
 
 % Testeado y funcionando bien :)
