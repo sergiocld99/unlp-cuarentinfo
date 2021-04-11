@@ -17,12 +17,11 @@ function ajusteExponencial (x, y, paso)
 	printf("Funcion de ajuste: %f * e^(%f x)\n", A, B)
 
 	% vamo a dibujar
-	clf
-	grid on
 	plot(x,y,'or')
 	hold on	
+	grid on
 
-	xi=[x(1):paso:x(length(x))];
+	xi=[min(x):paso:max(x)];
 	yi=A.*exp(B.*xi);
 	plot(xi,yi);	
 endfunction

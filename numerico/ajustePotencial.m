@@ -18,12 +18,11 @@ function ajustePotencial (x, y, paso)
 	printf("Funcion de ajuste: %f * x^%f\n", A, B)
 
 	% vamo a dibujar
-	clf
-	grid on
 	plot(x,y,'or')
 	hold on	
+	grid on
 
-	xi=[x(1):paso:x(length(x))];
+	xi=[min(x):paso:max(x)];
 	yi=A.*xi.^B;
 	plot(xi,yi);	
 endfunction
