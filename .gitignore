@@ -5,3 +5,7 @@
 *backup
 *.o
 *.compiled
+*.mp4
+*.mkv
+*.tmp
+*.crdownload
