@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-01T22:58:32.431Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36 OPR/73.0.3856.434" etag="dbugBLBEX-tkhhNEk6Qx" version="14.6.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-01T22:59:16.407Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36 OPR/73.0.3856.434" etag="VLUZ_Y5sOfb4-z4PLQwV" version="14.6.9" type="github">
   <diagram id="gBL7eTEsfLLzIXhej8cL" name="Page-1">
-    <mxGraphModel dx="2085" dy="2343" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2967" dy="3231" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -808,7 +808,7 @@
         <mxCell id="QZvfcPdy9IYKOWVkBBUl-5" value="&lt;span style=&quot;font-size: 32px&quot;&gt;ACUM&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-10" y="1670" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="QZvfcPdy9IYKOWVkBBUl-7" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.logic_gates.inverter_2" vertex="1" parent="1">
+        <mxCell id="QZvfcPdy9IYKOWVkBBUl-7" value="ß" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.logic_gates.inverter_2" vertex="1" parent="1">
           <mxGeometry x="160" y="1730" width="100" height="60" as="geometry" />
         </mxCell>
       </root>
