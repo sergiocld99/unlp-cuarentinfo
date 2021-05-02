@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-02T00:34:25.196Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51" etag="3L-iefuD4NBeGcMiAFhX" version="14.6.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-02T00:36:31.938Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51" etag="cjZ2zgxH7OmNgo4dx31E" version="14.6.9" type="github">
   <diagram id="gBL7eTEsfLLzIXhej8cL" name="Page-1">
     <mxGraphModel dx="2217" dy="1903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1475,6 +1475,9 @@
         </mxCell>
         <mxCell id="Yv_38GfAKiieHnqcqw_q-86" value="ENTRADA LÓGICA DEBE ESTAR EN 1 PARA ENCENDER EL LED" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="140" y="910" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Yv_38GfAKiieHnqcqw_q-87" value="Lx = 1 si debe encenderse el LED" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1250" width="250" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
