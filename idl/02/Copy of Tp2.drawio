@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-03T18:08:58.956Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36 OPR/73.0.3856.434" etag="GJ8ktzVrg29mHaPOlGKk" version="14.6.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-03T18:09:30.981Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36 OPR/73.0.3856.434" etag="W0OoQqdVfZHkBQzE-uQO" version="14.6.9" type="github">
   <diagram id="gBL7eTEsfLLzIXhej8cL" name="Page-1">
-    <mxGraphModel dx="1722" dy="1978" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2332" dy="2592" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1703,7 +1703,7 @@
             <mxPoint x="-32" y="140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-121" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;" vertex="1" parent="1">
+        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-121" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="-100" y="100" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RlH9yC4JIQp5Ubt3tGYb-122" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.resistors.resistor_2;rotation=-360;direction=east;" vertex="1" parent="1">
@@ -1726,7 +1726,7 @@
             <mxPoint x="-120" y="230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-125" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;" vertex="1" parent="1">
+        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-125" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="-100" y="190" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RlH9yC4JIQp5Ubt3tGYb-126" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.resistors.resistor_2;rotation=-360;direction=east;" vertex="1" parent="1">
@@ -1744,7 +1744,7 @@
             <mxPoint x="-32" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-129" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;" vertex="1" parent="1">
+        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-129" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="-100" y="280" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RlH9yC4JIQp5Ubt3tGYb-130" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.resistors.resistor_2;rotation=-360;direction=east;" vertex="1" parent="1">
@@ -1765,7 +1765,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-133" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;" vertex="1" parent="1">
+        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-133" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="-100" y="370" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RlH9yC4JIQp5Ubt3tGYb-134" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.resistors.resistor_2;rotation=-360;direction=east;" vertex="1" parent="1">
@@ -1783,7 +1783,7 @@
             <mxPoint x="-32" y="500" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-137" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;" vertex="1" parent="1">
+        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-137" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="-100" y="460" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RlH9yC4JIQp5Ubt3tGYb-138" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.resistors.resistor_2;rotation=-360;direction=east;" vertex="1" parent="1">
@@ -1801,7 +1801,7 @@
             <mxPoint x="-32" y="590" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-141" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;" vertex="1" parent="1">
+        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-141" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="-100" y="550" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RlH9yC4JIQp5Ubt3tGYb-142" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.resistors.resistor_2;rotation=-360;direction=east;" vertex="1" parent="1">
@@ -1819,7 +1819,7 @@
             <mxPoint x="-32" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-145" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;" vertex="1" parent="1">
+        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-145" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="-100" y="640" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RlH9yC4JIQp5Ubt3tGYb-146" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.resistors.resistor_2;rotation=-360;direction=east;" vertex="1" parent="1">
@@ -1837,7 +1837,7 @@
             <mxPoint x="-32" y="770" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-149" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;" vertex="1" parent="1">
+        <mxCell id="RlH9yC4JIQp5Ubt3tGYb-149" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.opto_electronics.led_2;pointerEvents=1;rotation=-360;direction=east;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="-100" y="730" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RlH9yC4JIQp5Ubt3tGYb-150" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.resistors.resistor_2;rotation=-360;direction=east;" vertex="1" parent="1">
