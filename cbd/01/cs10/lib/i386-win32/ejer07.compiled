@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="D:\FPC\3.2.0\bin\i386-Win32\fpc.exe" Date="1355043128"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -FiD:\MIS_DOCS\GitHub\practicas\unlp-info-s5\cbd\01\cs10\lib\i386-win32 -FuD:\MIS_DOCS\GitHub\practicas\unlp-info-s5\cbd\01\cs10\ -FUD:\MIS_DOCS\GitHub\practicas\unlp-info-s5\cbd\01\cs10\lib\i386-win32\ -FED:\MIS_DOCS\GitHub\practicas\unlp-info-s5\cbd\01\cs10\ -oD:\MIS_DOCS\GitHub\practicas\unlp-info-s5\cbd\01\cs10\ejer07.exe ejer07.lpr"/>
-</CONFIG>
