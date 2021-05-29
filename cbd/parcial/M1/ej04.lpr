@@ -49,14 +49,14 @@ begin
     totalAutor:= 0;
 
     // mientras sea mismo autor
-    while (reg.codAutor <> valor_alto) and (reg.codAutor = codAutorAct) do begin
+    while (reg.codAutor = codAutorAct) do begin
       generoAct:= reg.genero;
       writeln('Genero: ',generoAct);
       writeln;
       totalGen:= 0;
 
-      // mientras sea mismo genero
-      while (reg.codAutor <> valor_alto) and (reg.codAutor = codAutorAct) and (reg.genero = generoAct) do begin
+      // mientras sea mismo autor y genero
+      while (reg.codAutor = codAutorAct) and (reg.genero = generoAct) do begin
         writeln('Nombre Disco: ',reg.nombreDisco,' cantidad vendida: ',reg.cantVendida);
         with reg do writeln(txtSalida,nombreDisco,' ',nombreAutor,' ',cantVendida);
         totalAutor:= totalAutor + 1;
