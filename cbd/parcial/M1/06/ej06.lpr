@@ -147,6 +147,19 @@ begin
   for i:=1 to cant_detalles do close(adet[i]);
 end;
 
+// TEST
+procedure listar(var mae:tMaestro);
+var
+  prod:producto;
+begin
+  reset(mae);
+  while not eof(mae) do begin
+    read(mae,prod);
+    with prod do writeln(codigo,' ',nombre,' ',descripcion,' ',precio:5:2,' ',stock,' ',stockMin);
+  end;
+  close(mae);
+end;
+
 // Variables del programa principal
 var
   opc:byte;
@@ -180,6 +193,7 @@ begin
     writeln('0. Terminar el programa');
     writeln('1. Crear maestro a partir de txt');
     writeln('2. Actualizar maestro a partir de detalles');
+    writeln('3. Listar maestro (TEST)');
 
     read(opc);
     readln;
@@ -188,6 +202,7 @@ begin
       0 : terminar:= true;
       1 : crearMaestro(mae,txt);
       2 : actualizar(mae,adet);
+      3 : listar(mae);
     end;
   end;
 
