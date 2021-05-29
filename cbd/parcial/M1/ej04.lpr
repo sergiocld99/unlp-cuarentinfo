@@ -45,20 +45,20 @@ begin
   // procesar todos los cds
   while (reg.codAutor <> valor_alto) do begin
     codAutorAct:= reg.codAutor;
-    writeln('Autor: ',codAutorAct);
+    writeln('Autor: ',reg.nombreAutor);
     totalAutor:= 0;
 
     // mientras sea mismo autor
-    while (reg.codAutor = codAutorAct) do begin
+    while (reg.codAutor <> valor_alto) and (reg.codAutor = codAutorAct) do begin
       generoAct:= reg.genero;
       writeln('Genero: ',generoAct);
       writeln;
       totalGen:= 0;
 
       // mientras sea mismo genero
-      while (reg.genero = generoAct) do begin
+      while (reg.codAutor <> valor_alto) and (reg.codAutor = codAutorAct) and (reg.genero = generoAct) do begin
         writeln('Nombre Disco: ',reg.nombreDisco,' cantidad vendida: ',reg.cantVendida);
-        with reg do writeln(txtSalida,codAutor,' ',genero,' ',nombreDisco);
+        with reg do writeln(txtSalida,nombreDisco,' ',nombreAutor,' ',cantVendida);
         totalAutor:= totalAutor + 1;
         totalGen:= totalGen + 1;
         total:= total + 1;
