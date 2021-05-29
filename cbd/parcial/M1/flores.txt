@@ -1,0 +1,10 @@
+1  1.44 florecilla1 nomVulgar1 color1  1.88
+2  9.11 nomCientifico2 nomVulgar2 color2  9.12
+3  2.55 nomCientifico3 nomVulgar3 color3  5.30
+4  9.61 nomCientifico4 nomVulgar4 color4 12.07
+5  5.74 nomCientifico5 nomVulgar5 color5  5.87
+6  7.54 nomCientifico6 nomVulgar6 color6 12.11
+7  1.36 nomCientifico7 nomVulgar7 color7  4.37
+8  8.58 nomCientifico8 nomVulgar8 color8 12.16
+9  3.68 nomCientifico9 nomVulgar9 color9  6.11
+10  9.09 ultima flor nomVulgar10 color10 10.78

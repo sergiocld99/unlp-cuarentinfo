@@ -28,7 +28,7 @@ end;
 
 procedure leerEspecie(var esp:tEspecie);
 begin
-  writeln('Ingrese nombre cientifico: ');
+  writeln('Ingrese nombre cientifico - ',valor_fin,' para terminar : ');
   readln(esp.nomCientifico);
 
   if (esp.nomCientifico <> valor_fin) then begin
@@ -137,8 +137,9 @@ begin
   // cerrar archivo
   close(arch);
 
-  // informar si no fue encontrado
-  if not encontrado then writeln(nombreViejo,' no encontrado');
+  // informar resultado
+  if encontrado then writeln(nombreViejo,' actualizado con exito a ',nombreNuevo)
+  else writeln(nombreViejo,' no encontrado');
 end;
 
 // Precondición: se recibe un archivo ya asignado
@@ -203,6 +204,7 @@ begin
   terminar:= false;
 
   while not terminar do begin
+    writeln;
     writeln('Seleccione una opcion: ');
     writeln('1. Reportar en pantalla la cantidad total de especies y la especie de menor y de mayor altura a alcanzar');
     writeln('2. Listar todo el contenido del archivo de a una especie por linea');
@@ -211,6 +213,7 @@ begin
     writeln('5. Listar todo el contenido del archivo, en un archivo de texto llamado ',nombre_txt);
     writeln('6. Terminar el programa');
     read(opc);
+    readln;
 
     case opc of
       1 : resumen(arch);
