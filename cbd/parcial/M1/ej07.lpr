@@ -15,6 +15,17 @@ type
   tArchivo = file of tVehiculo;
 
 // Procedimientos
+
+// Opcional: para un mejor listado
+procedure vaciar(var reg:tVehiculo);
+begin
+  reg.cantidadPuertas:=-1;
+  reg.codigoVehiculo:=-1;
+  reg.nroMotor:='####';
+  reg.patente:='####';
+  reg.precio:=-1;
+end;
+
 // Precondición: se recibe un archivo ya asignado
 procedure agregar(var arch:tArchivo; vehiculo:tVehiculo);
 var
@@ -35,14 +46,18 @@ begin
   val(sLibre,nLibre,codError);
 
   // desplazar puntero
-  if (nLibre = 0) then seek(arch,filePos(arch))
+  if (nLibre = 0) then seek(arch,fileSize(arch))
   else begin
-    // actualizar encabezado
+    // leer registro a reemplazar
     seek(arch,nLibre);
     read(arch,reg);
-    sLibre:= reg.descripcion;
+
+    // actualizar encabezado
     seek(arch,0);
+    vaciar(reg); //opcional
     write(arch,reg);
+
+    // mover puntero a pos a reemplazar
     seek(arch,nLibre);
   end;
 
@@ -57,6 +72,7 @@ end;
 procedure eliminar(var arch:tArchivo; codigoVehiculo:integer);
 var
   reg:tVehiculo;
+  encontrado:boolean;
 
   // variables de la lista invertida
   sLibre:string;
@@ -66,12 +82,14 @@ begin
   // abrir archivo
   reset(arch);
 
+  encontrado:=false;
+
   // leer encabezado
   read(arch,reg);
   sLibre:= reg.descripcion;
 
   // buscar vehiculo a borrar
-  while not (eof(arch) or (reg.codigoVehiculo = codigoVehiculo)) do begin
+  while not (eof(arch) or encontrado) do begin
     read(arch,reg);
 
     if (reg.codigoVehiculo = codigoVehiculo) then begin
@@ -80,6 +98,7 @@ begin
 
       // retroceder en archivo y cambiar descripcion
       seek(arch,nLibre);
+      vaciar(reg);
       reg.descripcion:= sLibre;
       write(arch,reg);
 
@@ -88,14 +107,16 @@ begin
       str(nLibre,sLibre);
       reg.descripcion:= sLibre;
       write(arch,reg);
-    end else begin
-      // codigo no encontrado
-      writeln(codigoVehiculo,' no encontrado');
+
+      encontrado:= true;
     end;
   end;
 
   // cerrar archivo
   close(arch);
+
+  if encontrado then writeln(codigoVehiculo,' eliminado con exito')
+  else writeln(codigoVehiculo,' no encontrado');
 end;
 
 // Variables del programa principal
@@ -131,6 +152,7 @@ begin
         writeln('Ingrese nro de motor:'); readln(v.nroMotor);
         writeln('Ingrese cant de puertas:'); readln(v.cantidadPuertas);
         writeln('Ingrese precio:'); readln(v.precio);
+        v.descripcion:='0';
         agregar(arch,v);
       end;
       2 : begin
@@ -142,7 +164,7 @@ begin
         reset(arch);
         while not eof(arch) do begin
           read(arch,v);
-          with v do writeln(codigoVehiculo,' ',patente,' ',nroMotor,' ',cantidadPuertas,' ',precio:5:2);
+          with v do writeln(codigoVehiculo,' ',patente,' ',nroMotor,' ',cantidadPuertas,' ',precio:5:2,' ',descripcion);
         end;
         close(arch);
       end;
