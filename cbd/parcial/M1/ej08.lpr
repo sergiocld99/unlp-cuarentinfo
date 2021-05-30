@@ -22,7 +22,7 @@ begin
   reset(arch);
   rewrite(txt);
 
-  writeln('Ingrese nro de articulo a eliminar (ingrese -1 para terminar):');
+  writeln('Ingrese nros de articulos a eliminar [en orden ASCENDENTE] (ingrese -1 para terminar):');
   readln(nroEliminar);
   read(arch,art);
 
@@ -30,6 +30,9 @@ begin
   // y además, los códigos se ingresan en orden ascendente
   while (nroEliminar <> -1) do begin
     while (art.nro <> nroEliminar) do read(arch,art);
+    // listar en archivo de texto (realizar antes de borrar logicamente el registro)
+    with art do writeln(txt,nro,' ',descripcion,' ',color,' ',talle,' ',stock,' ',precio:5:2);
+
     // marca de borrado es -1 en nro de articulo
     art.nro:=-1;
 
@@ -37,9 +40,8 @@ begin
     seek(arch,filepos(arch)-1);
     write(arch,art);
 
-    // listar en archivo de texto
-    with art do writeln(txt,nro,' ',descripcion,' ',color,' ',talle,' ',stock,' ',precio:5:2);
-
+    // leer siguiente
+    readln(nroEliminar);
   end;
 
   close(arch);
