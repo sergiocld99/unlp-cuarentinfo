@@ -16,20 +16,10 @@ type
 
 // Procedimientos
 
-// Opcional: para un mejor listado
-procedure vaciar(var reg:tVehiculo);
-begin
-  reg.cantidadPuertas:=-1;
-  reg.codigoVehiculo:=-1;
-  reg.nroMotor:='####';
-  reg.patente:='####';
-  reg.precio:=-1;
-end;
-
 // Precondición: se recibe un archivo ya asignado
 procedure agregar(var arch:tArchivo; vehiculo:tVehiculo);
 var
-  reg:tVehiculo;
+  reg,h:tVehiculo;
 
   // variables de la lista invertida
   sLibre:string;
@@ -41,8 +31,8 @@ begin
   reset(arch);
 
   // leer encabezado (primera posicion)
-  read(arch,reg);
-  sLibre:= reg.descripcion;
+  read(arch,h);
+  sLibre:= h.descripcion;
   val(sLibre,nLibre,codError);
 
   // desplazar puntero
@@ -54,8 +44,8 @@ begin
 
     // actualizar encabezado
     seek(arch,0);
-    vaciar(reg); //opcional
-    write(arch,reg);
+    h.descripcion:= reg.descripcion;
+    write(arch,h);
 
     // mover puntero a pos a reemplazar
     seek(arch,nLibre);
@@ -71,7 +61,7 @@ end;
 // Precondición: se recibe un archivo ya asignado
 procedure eliminar(var arch:tArchivo; codigoVehiculo:integer);
 var
-  reg:tVehiculo;
+  reg,h:tVehiculo;
   encontrado:boolean;
 
   // variables de la lista invertida
@@ -85,8 +75,7 @@ begin
   encontrado:=false;
 
   // leer encabezado
-  read(arch,reg);
-  sLibre:= reg.descripcion;
+  read(arch,h);
 
   // buscar vehiculo a borrar
   while not (eof(arch) or encontrado) do begin
@@ -98,15 +87,13 @@ begin
 
       // retroceder en archivo y cambiar descripcion
       seek(arch,nLibre);
-      vaciar(reg);
-      reg.descripcion:= sLibre;
-      write(arch,reg);
+      write(arch,h);
 
       // actualizar encabezado
       seek(arch,0);
       str(nLibre,sLibre);
-      reg.descripcion:= sLibre;
-      write(arch,reg);
+      h.descripcion:= sLibre;
+      write(arch,h);
 
       encontrado:= true;
     end;
