@@ -9,3 +9,8 @@ Ejercicios y trabajos prácticos realizados desde una notebook varelense xd
 Y por si alguno quiere agradecerme dejaré esto por acá... jajaj
 
 * Mercado Pago: cvu 0000003100098348206259 // alias sergiocalderon99
+
+## Y ahora vuelve la presencialidad...
+F
+
+![Alt text](adios_virtualidad.png)
