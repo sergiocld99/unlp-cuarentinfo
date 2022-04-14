@@ -1,7 +1,0 @@
-codigo de calzado: 1235
-numero: 43
-descripcion: Zapatos cool
-precio:  1.94000000000000E+001
-color: negro
-stock: 15
-stock minimo: 20

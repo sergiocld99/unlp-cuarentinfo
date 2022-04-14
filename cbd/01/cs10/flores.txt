@@ -1,8 +1,0 @@
-"aaa" 5 1.68 "flor 5" azul
-"bbb" 1 1.50 "flor 1" rojo
-"ccc" 3 1.46 "flor 3" amarillo
-"ddd" 4 1.89 "flor 4" verde
-"eee" 4 1.89 "flor 4" verde
-"fff" 4 1.89 "flor 4" verde
-"esto va al final" 7 2.09 "flor 7" violeta
-"esto tmb al final" 8 1.49 "flor 8" rosa

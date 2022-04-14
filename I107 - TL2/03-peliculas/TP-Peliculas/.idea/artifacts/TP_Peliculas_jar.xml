@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="TP-Peliculas:jar">
+    <output-path>$PROJECT_DIR$/../JAR</output-path>
+    <root id="archive" name="TP-Peliculas.jar">
+      <element id="module-output" name="TP-Peliculas" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
