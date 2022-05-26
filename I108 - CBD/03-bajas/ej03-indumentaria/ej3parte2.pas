@@ -42,6 +42,7 @@ begin
   close(dest);
   close(archT);
 end;
+Aa
 
 procedure bajar(var arch:tArchivo);
 var
