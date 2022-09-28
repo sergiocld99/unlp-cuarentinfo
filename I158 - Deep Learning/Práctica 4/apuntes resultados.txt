@@ -1,0 +1,4 @@
+-- PRÁCTICA 4
+
+1) Entrena con 100% de aciertos usando 6 neuronas en 1 capa oculta
+La tasa de aciertos para el 20% de datos restantes es 88.9%
